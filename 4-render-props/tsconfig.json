@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["dom", "es6"],
+        "module": "commonjs",
+        "outDir": "./build",
+        "rootDir": "./src",
+        "jsx": "react",
+        "strict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+    }
+}
