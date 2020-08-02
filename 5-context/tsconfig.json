@@ -7,8 +7,8 @@
         "rootDir": "./src",
         "jsx": "react",
         "strict": true,
-        "noImplicitAny": true,
-        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "noImplicitThis": false,
         "alwaysStrict": true,
     }
 }

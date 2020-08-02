@@ -51,8 +51,6 @@ const MouseTrackerWithCatCursor = WithMouseComponent(CatCursor)
 render(
     <div>
         <MouseTrackerHook />
-        {/*(<>
-            
         <ComponentAsClass
             name="Miles"
             surname="Davis" />
@@ -68,8 +66,6 @@ render(
             name="Miles"
             surname="Davis" />
         <MouseTrackerWithCatCursor />
-
-        </>)*/}
     </div>,
     document.getElementById("root")
 );
