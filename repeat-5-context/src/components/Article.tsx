@@ -1,15 +1,18 @@
 
 import * as React from 'react';
+import { useContext } from 'react';
+import { ArticleContext } from '../context/Articles';
 
 export interface ArticleType { id: number; title: string; body: string; };
 
 interface Props {
     article: ArticleType
-    deleteArticle: (id: number) => void
+    //deleteArticle: (id: number) => void
 }
 
 const Article = (props: Props) => {
-    const { article, deleteArticle } = props;
+    const { deleteArticle } = useContext(ArticleContext);
+    const { article/*, deleteArticle */ } = props;
     const deleteHandler = (id: number) => (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         deleteArticle(id);
     }

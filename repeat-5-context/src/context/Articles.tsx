@@ -41,3 +41,4 @@ const ArticleProvider = ({ children }: { children: JSX.Element }) => {
 }
 
 export default ArticleProvider;
+export { ArticleContext };

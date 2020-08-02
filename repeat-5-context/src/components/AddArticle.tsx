@@ -1,15 +1,18 @@
 
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import { ArticleType } from '../components/Article'
+import { ArticleContext } from '../context/Articles';
 
+/*
 interface Props {
     addArticle: (article: ArticleType) => void
 }
+*/
 
-const AddArticle = (props: Props) => {
-    const { addArticle } = props;
+const AddArticle = (/*props: Props*/) => {
+    const { addArticle } = useContext(ArticleContext);
     const [ article, setArticle ] = useState({ id: Math.random(), title: '', body: '' });
 
     const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
