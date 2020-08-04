@@ -1,9 +1,9 @@
 
 import * as React from 'react';
-import { useContext } from 'react';
-import { ArticleContext } from '../context/Articles';
 
-export interface ArticleType { id: number; title: string; body: string; };
+export interface ArticleType {
+    id: number; title: string; body: string;
+};
 
 interface Props {
     article: ArticleType
@@ -11,10 +11,9 @@ interface Props {
 }
 
 const Article = (props: Props) => {
-    const { deleteArticle } = useContext(ArticleContext);
-    const { article/*, deleteArticle */ } = props;
+    const { article } = props;
     const deleteHandler = (id: number) => (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        deleteArticle(id);
+        console.log('not defined');
     }
     return (
         <div>
@@ -25,4 +24,4 @@ const Article = (props: Props) => {
     )
 };
 
-export default Article;
+export { Article };
