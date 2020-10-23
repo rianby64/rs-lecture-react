@@ -6,7 +6,7 @@ import { ArticleContext } from "../../context/articleContext";
 
 const AddArticle = () => {
   const { saveArticle } = useContext(ArticleContext);
-  const [article, setArticle] = useState() as [Object, React.Dispatch<React.SetStateAction<Object>>];
+  const [article, setArticle] = useState({} as { id: number; title: string; body: string; });
 
   const handleArticleData = (e: React.ChangeEvent<HTMLInputElement>) => {
     setArticle({
@@ -16,8 +16,7 @@ const AddArticle = () => {
   }
   const addNewArticle = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newArticle = article as { id: number; title: string; body: string; };
-    saveArticle(newArticle);
+    saveArticle(article);
   }
 
   return (

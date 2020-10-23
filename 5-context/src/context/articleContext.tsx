@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { createContext, useState } from "react";
 
-const saveArticle = (article: { id: number; title: string; body: string; }) => {
+const saveArticle = (_: { id: number; title: string; body: string; }) => {
   console.log('this is the default saveArticle, never gonna be called');
 };
 
-const deleteArticle = (article: { id: number }) => {
+const deleteArticle = (_: { id: number }) => {
   console.log('this is the default saveArticle, never gonna be called');
 };
 
@@ -22,7 +22,7 @@ export const ArticleContext = createContext({
   deleteArticle: typeof deleteArticle,
 });
 
-const ArticleProvider = ({ children }) => {
+const ArticleProvider = ({ children }: { children: React.ReactNode }) => {
   const [articles, setArticles] = useState([
     { id: 1, title: "post 1", body: "Quisque cursus, metus vitae pharetra" },
     { id: 2, title: "post 2", body: "Quisque cursus, metus vitae pharetra" }

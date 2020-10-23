@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useState, useContext } from "react";
 import { ArticleContext } from "../../context/articleContext";
 
-const article = ({ article }) => {
+const article = ({ article }: { article: { title: string; body: string; id: number }}) => {
   const { deleteArticle} = useContext(ArticleContext);
 
   const deleteArticleHandler = (article: { id: number }) => {
