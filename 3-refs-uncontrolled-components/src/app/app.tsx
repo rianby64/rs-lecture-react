@@ -9,10 +9,10 @@ import { UncontrolledComponent3 } from './UncontrolledComponent3';
 
 render(
     <div>
-        <ControlledComponent1 value="" />
-        <UncontrolledComponent1 value="initial value" />
-        <UncontrolledComponent2 value="" />
-        <UncontrolledComponent3 value="" />
+        {/* <ControlledComponent1 value="" /> */}
+        {/* <UncontrolledComponent1 value="initial value" /> */}
+        {/* <UncontrolledComponent2 value="" /> */}
+        {/* <UncontrolledComponent3 value="" /> */}
     </div>,
     document.getElementById("root")
 );

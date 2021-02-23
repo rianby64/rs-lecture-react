@@ -25,7 +25,7 @@ export class ControlledComponent1 extends React.Component<Props, State> {
 
     reset = () => {
         this.setState({
-            value: ''
+            value: 'the initial value'
         })
     }
 

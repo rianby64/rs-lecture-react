@@ -20,5 +20,10 @@ module.exports = {
         rules: [
             { test: /\.tsx?$/, loader: 'ts-loader' }
         ]
-    }
+    },
+    devServer: {
+        watchOptions: {
+            poll: true,
+          },      
+    },
 }

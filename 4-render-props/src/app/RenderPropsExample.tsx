@@ -33,9 +33,14 @@ interface PropsWithRenderFn extends PropsExample1 {
 export class ComponentWithRP extends React.Component<PropsWithRenderFn> {
     render() {
         const { render, name, surname } = this.props;
-        return render({
-            name: name,
-            surname: surname,
-        })
+        return <div>
+            Here we go!
+            {
+                render({
+                    name: name,
+                    surname: surname,
+                })
+            }
+        </div>
     }
 }

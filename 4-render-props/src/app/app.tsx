@@ -47,10 +47,13 @@ class CatCursor extends React.Component<{ x: number, y: number}> {
 const MyHOC = WithComponentNoProps(MyEmptyComponent);
 const MyHOC2 = WithComponent(ComponentAsFunction);
 const MouseTrackerWithCatCursor = WithMouseComponent(CatCursor)
+const MouseTrackerWithMouseHook = WithMouseComponent(MouseTrackerHook)
 
 render(
     <div>
-        <MouseTracker1 />
+        {/* <MyHOC2 namereal="Miles" surnamereal="Davis" /> */}
+        {/* <MouseTrackerWithCatCursor></MouseTrackerWithCatCursor> */}
+        <ComponentWithRP render={renderAsProp} name="this is my name" surname="this is my surname" />
     </div>,
     document.getElementById("root")
 );

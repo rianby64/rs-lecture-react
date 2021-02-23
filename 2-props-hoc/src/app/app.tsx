@@ -23,7 +23,7 @@ const extra = {
 
 render(
     <div>
-        <Props1
+        {/* <Props1
             name="Miles"
             surname="Davis"
             address="308 W 77th St, New York, NY 10024, United States" />
@@ -43,9 +43,9 @@ render(
 
         <Props5 />
 
-        <Props6 value="a second value" />
+        <Props6 value="a second value" /> */}
 
-        <Props7 />
+        <Props7 HocExample={() => Props6} />
     </div>,
     document.getElementById("root")
 );

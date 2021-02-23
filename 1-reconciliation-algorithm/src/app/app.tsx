@@ -8,8 +8,8 @@ import { ArrValues } from './ArrValues';
 
 render(
     <div>
-        <Toggler1 />
-        <Toggler2 />
+        {/* <Toggler1 /> */}
+        {/* <Toggler2 /> */}
         <ArrValues values={(new Array(8000)).fill(0).map(v => Math.round(Math.random() * 100))} />
     </div>,
     document.getElementById("root")

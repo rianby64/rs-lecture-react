@@ -14,7 +14,6 @@ export function MouseTrackerHook() {
   
     return (
         <div style={{ height: '100%' }} onMouseMove={handleMouseMove}>
-            <h1>Move the mouse around!</h1>
             <p>The current mouse position is ({position.x}, {position.y})</p>
         </div>
     );

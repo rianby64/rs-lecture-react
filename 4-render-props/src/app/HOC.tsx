@@ -6,6 +6,12 @@ interface PropsExample2 {
     surname: string;
 }
 
+
+interface PropsExample3 {
+    namereal: string;
+    surnamereal: string;
+}
+
 export function WithComponentNoProps(Component: React.ComponentType) {
     return class extends React.Component {
         render() {
@@ -20,14 +26,14 @@ export function WithComponentNoProps(Component: React.ComponentType) {
 }
 
 export function WithComponent(Component: React.ComponentType<PropsExample2>) {
-    return class extends React.Component<PropsExample2> {
+    return class extends React.Component<PropsExample3> {
         render() {
             return (
                 <div>
                     <div>This is my HOC</div>
                     <Component
-                        name={this.props.name}
-                        surname={this.props.surname} />
+                        name={this.props.namereal}
+                        surname={this.props.surnamereal} />
                 </div>
             )
         }
